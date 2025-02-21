@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design  | Aswini Sudha</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">ASK<span>.</span></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certified">Certifications</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contacttt">Contact Me</a></li>
+        <input type="checkbox" id="theme-toggle" hidden>
+        <!-- <input type="checkbox" id="theme-toggle"> -->
+        <!-- <label for="theme-toggle" class="toggle">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+        </label> -->
+      </ul>
+      <div class="nav__btns">
+        <a href="#contacttt" class="btn" >Hire Me</a>
+      </div>
+    </nav>
+    <!-- <script>
+      const toggle = document.getElementById("theme-toggle");
+
+// Check if Dark Mode was previously enabled
+if (localStorage.getItem("dark-mode") === "enabled") {
+    document.body.classList.add("dark-mode");
+    toggle.checked = true;
+}
+
+// Toggle Theme on Click
+toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("dark-mode", "enabled");
+    } else {
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("dark-mode", "disabled");
+    }
+});
+
+    </script> -->
+
+    <header id="home">
+      <div class="section__container header__container">
+        <div class="header__content">
+          <h2>Hi, I am</h2>
+          <h1>Aswini Sudha</h1>
+          <h3>Web Development Trainee</h3>
+          <p>
+            A creative problem-solver who loves turning ideas into interactive, user-friendly web applications. Constantly exploring new tools to enhance web development skills!
+          </p>
+          <div class="header__btns">
+            <a href="assets/Aswini_Sudha_Kattamuri_Resume.pdf" class="btn" download="Aswini_Sudha_Kattamuri_Resume.pdf">Download CV</a>
+            <a href="#contacttt" class="btn">Contact Me</a>
+          </div>
+        </div>
+        <div class="header__image">
+          <!-- <img src="assets/header.png" alt="header" /> -->
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container intro__container" id="intro">
+      <div class="intro__image">
+        <img src="assets/i2.png" alt="intro" />
+      </div>
+      <div class="intro__content">
+        <p class="section__subheader">My Intro</p>
+        <h2 class="section__header">About Me</h2>
+        <p class="intro__description">
+          I am Aswini Sudha, passionate about web development.
+                                    I continuously learn and improve by working on projects, solving challenges, and exploring new technologies.<br>
+          I focus on building responsive and user-friendly applications.
+          I enjoy tackling problems that enhance my skills and push me to grow as a developer.<br> 
+          My goal is to create impactful solutions that enhance user experience and performance.
+                    </p>
+        </p>
+        <div class="intro__grid">
+          <h5>
+            <span><i class="ri-user-line"></i></span> Name
+          </h5>
+          <span>:</span>
+          <p>Aswini Sudha</p>
+          <h5>
+            <span><i class="ri-phone-line"></i></span> Phone
+          </h5>
+          <span>:</span>
+          <p>78427 27933</p>
+          <h5>
+            <span><i class="ri-mail-line"></i></span> Email
+          </h5>
+          <span>:</span>
+          <p>aswinisudha49@gmail.com</p>
+        </div>
+        <h4>My Interests</h4>
+        <div class="intro__flex">
+          <div>
+            <span><i class="ri-headphone-line"></i></span> Music
+          </div>
+          <div>
+            <span><i class="ri-briefcase-3-line"></i></span> Travel
+          </div>
+          <div>
+            <span><i class="ri-film-line"></i></span> Movie
+          </div>
+          <div>
+            <span><i class="ri-camera-line"></i></span> Photo
+          </div>
+        </div>
+      </div>
+    </section>
+        
+        <section class="choose" id="skills">
+          <div class="section__container choose__container">
+            <p class="section__subheader">Why Choose Me</p>
+            <h2 class="section__header">My Skills</h2>
+            
+            <div class="choose__grid">
+              <!-- Left Side Buttons -->
+              <div class="choose__buttons">
+                <button class="btnn" onclick="showContent('languages')">Languages</button>
+                <button class="btnn" onclick="showContent('web-tech')">Web Technologies</button>
+                <button class="btnn" onclick="showContent('dev-tools')">Developer Tools</button>
+                <button class="btnn" onclick="showContent('proficiency')">Proficiency</button>
+              </div>
+        
+              <!-- Right Side Content -->
+              <div class="choose__content">
+                
+                <div id="languages">
+                  <div class="choose__card">
+                    <div>
+                      <h4>C++</h4>
+                      <h4>90%</h4>
+                    </div>
+                    <div class="choose__progress" style="--progress: 90%"></div>
+                  </div>
+                  <div class="choose__card">
+                    <div>
+                      <h4>Python</h4>
+                      <h4>85%</h4>
+                    </div>
+                    <div class="choose__progress" style="--progress: 85%"></div>
+                  </div>
+                  <div class="choose__card">
+                    <div>
+                      <h4>HTML & CSS</h4>
+                      <h4>95%</h4>
+                    </div>
+                    <div class="choose__progress" style="--progress: 95%"></div>
+                  </div>
+                  
+                </div>
+        
+                <div id="web-tech" class="hidden">
+                  <div class="choose__card">
+                    <div>
+                      <h4>Linux</h4>
+                      <h4>75%</h4>
+                    </div>
+                    <div class="choose__progress" style="--progress: 75%"></div>
+                  </div>
+                  <div class="choose__card">
+                    <div>
+                      <h4>React Native</h4>
+                      <h4>70%</h4>
+                    </div>
+                    <div class="choose__progress" style="--progress: 70%"></div>
+                  </div>
+                  <div class="choose__card">
+                    <div>
+                      <h4>React</h4>
+                      <h4>70%</h4>
+                    </div>
+                    <div class="choose__progress" style="--progress: 90%"></div>
+                  </div>
+                  <div class="choose__card">
+                    <div>
+                      <h4>JavaScript</h4>
+                      <h4>80%</h4>
+                    </div>
+                    <div class="choose__progress" style="--progress: 90%"></div>
+                  </div>
+                </div>
+                
+        
+                <div id="dev-tools" class="hidden">
+                  <div class="choose__card">
+                    <div>
+                      <h4>VS Code</h4>
+                      <h4>95%</h4>
+                    </div>
+                    <div class="choose__progress" style="--progress: 95%"></div>
+                  </div>
+                  <div class="choose__card">
+                    <div>
+                      <h4>Sublime Text</h4>
+                      <h4>80%</h4>
+                    </div>
+                    <div class="choose__progress" style="--progress: 80%"></div>
+                  </div>
+                  <div class="choose__card">
+                    <div>
+                      <h4>Jupyter</h4>
+                      <h4>85%</h4>
+                    </div>
+                    <div class="choose__progress" style="--progress: 85%"></div>
+                  </div>
+                  <div class="choose__card">
+                    <div>
+                      <h4>Git & GitHub</h4>
+                      <h4>90%</h4>
+                    </div>
+                    <div class="choose__progress" style="--progress: 90%"></div>
+                  </div>
+                </div>
+        
+                <div id="proficiency" class="hidden">
+                  <div class="choose__card">
+                    <div>
+                      <h4>Data Structures & Algorithms</h4>
+                      <h4>85%</h4>
+                    </div>
+                    <div class="choose__progress" style="--progress: 85%"></div>
+                  </div>
+                </div>
+        
+              </div>
+            </div>
+          </div>
+        </section>
+    
+    <script>
+      function showContent(id) {
+        document.querySelectorAll('.choose__content > div').forEach(div => {
+          div.classList.add('hidden');
+        });
+        document.getElementById(id).classList.remove('hidden');
+      }
+    </script>
+    
+
+    <section class="section__container journey__container">
+      <p class="section__subheader">My Qualifications</p>
+      <h2 class="section__header">Awesome Journey</h2>
+      <div class="journey__grid">
+        <div>
+          <div class="journey__grid__header">
+            <span><i class="ri-graduation-cap-line"></i></span> Education
+          </div>
+          <div class="journey__card">
+            <span><i class="ri-circle-fill"></i></span>
+            <div>
+              <h4>Bachelor of Technology</h4>
+              <h5>Computer Science And Engineering</h5>
+              <p>
+                <span><i class="ri-calendar-fill"></i></span> 2022-2026
+              </p>
+            </div>
+          </div>
+          <div class="journey__card">
+            <span><i class="ri-circle-fill"></i></span>
+            <div>
+              <h4>Intermediate</h4>
+              <h5>MPC</h5>
+              <p>
+                <span><i class="ri-calendar-fill"></i></span> 2020-2022
+              </p>
+            </div>
+          </div>
+          <div class="journey__card">
+            <span><i class="ri-circle-fill"></i></span>
+            <div>
+              <h4>SSC</h4>
+              <!-- <h5></h5> -->
+              <p>
+                <span><i class="ri-calendar-fill"></i></span> 2020
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="journey__grid__header">
+            <span><i class="ri-briefcase-line"></i></span> Experience
+          </div>
+          <div class="journey__card">
+            <span><i class="ri-circle-fill"></i></span>
+            <div>
+              <h4>Python Intern</h4>
+              <h5>Technical Hub</h5>
+              <p>
+                <span><i class="ri-calendar-fill"></i></span> Jan 2024-June 2024
+              </p>
+            </div>
+          </div>
+          <div class="journey__card">
+            <span><i class="ri-circle-fill"></i></span>
+            <div>
+              <h4>Frontend Developer</h4>
+              <h5>Technical Hub</h5>
+              <p>
+                <span><i class="ri-calendar-fill"></i></span> June 2024 – July 2024
+              </p>
+            </div>
+          </div>
+          <!-- <div class="journey__card">
+            <span><i class="ri-circle-fill"></i></span>
+            <div>
+              <h4>Marketing Intern</h4>
+              <h5>DEF Solutions</h5>
+              <p>
+                <span><i class="ri-calendar-fill"></i></span> 2020-2021
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container service__container" id="certified">
+      <p class="section__subheader">My Certifications</p>
+      <h2 class="section__header">What I Achieve</h2>
+      <div class="service__grid">
+        <div class="service__card">
+          <span><i class="ri-award-fill"></i></span>
+          <h4>Red Hat System Administrator  </h4>
+          <p>
+            "Achieved Red Hat System Administrator certification.Proficient
+             in managing and troubleshooting Red Hat Enterprise Linux environments."
+          </p>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-award-fill"></i></span>
+          <h4>HTML and CSS</h4>
+          <p>
+            "Earned IT Specialist Certification in HTML and CSS from Certiport,
+            showcasing proficiency in web development, responsive design, and modern styling techniques."
+          </p>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-award-fill"></i></span>
+          <h4>Python Programming</h4>
+          <p>
+            "Achieved IT Specialist Certification in Python from Certiport,
+             showcasing proficiency in programming and problem-solving."
+          </p>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-award-fill"></i></span>
+          <h4>Java</h4>
+          <p>
+            "Achieved IT Specialist Certification in Java from Certiport,
+             demonstrating expertise in object-oriented programming and development."
+          </p>
+        </div>
+        <!-- <div class="service__card">
+          <span><i class="ri-seo-line"></i></span>
+          <h4>SEO</h4>
+          <p>
+            Our SEO strategies are tailored to your specific goals, helping you
+            reach your target audience and grow your online presence.
+          </p>
+        </div> -->
+        <!-- <div class="service__card">
+          <span><i class="ri-share-circle-line"></i></span>
+          <h4>Digital Marketing</h4>
+          <p>
+            From pay-per-click (PPC) advertising to social media marketing, we
+            ensure your brand stands out in the crowded digital landscape.
+          </p>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="section__container portfolio__container">
+        <p class="section__subheader">My Portfolio</p>
+        <h2 class="section__header">Recent Works</h2>
+        <div class="portfolio__nav">
+          <!-- <button class="btn mixitup-control-active" data-filter="all"> -->
+            
+          <!-- </button> -->
+          <button class="btn" data-filter=".web">Web Apps</button>
+          <!-- <button class="btn" data-filter=".game">Games</button>
+          <button class="btn" data-filter=".design">Designs</button>
+        </div> -->
+        <div class="portfolio__grid">
+          <div class="portfolio__card mix web">
+            <img src="assets/project-1.jpg" alt="project"  style="height:220px"/>
+          </div>
+          <div class="portfolio__card mix design">
+            <img src="assets/project-3.jpg" alt="project" style="height:220px" />
+          </div>
+          <div class="portfolio__card mix web game">
+            <img src="assets/project-2.png" alt="project" />
+          </div>
+          <div class="portfolio__card mix design web">
+            <img src="assets/project-4.png" alt="project" />
+          </div>
+          <div class="portfolio__card mix design game">
+            <img src="assets/project-5.png" alt="project"  style="height:230px"/>
+          </div>
+          <div class="portfolio__card mix design">
+            <img src="assets/project-6.png" alt="project"  style="height:230px"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="banner__container">
+      <div class="banner__content">
+        <h2 class="section__header">Have A Project On Your Mind</h2>
+        <p>
+          Whether it's enhancing your brand's digital presence or launching a
+          targeted marketing campaign, I'm here to help you achieve your goals.
+          Let's collaborate!
+        </p>
+        <div class="banner__btn">
+          <button class="btn">Contact Me</button>
+        </div>
+      </div>
+      <div class="banner__image">
+        <img src="assets/banner.png" alt="banner" />
+      </div>
+    </section> -->
+
+    <section id="contacttt" class="contact section">
+      <div class="container section-title">
+          <h2 style="text-align: center; color: #0C0A5D; font-size: 45px;">Contact Me</h2>
+          <!-- <p style="text-align: center; color: #0C0A5D;">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div>
+
+      <div class="contact-container">
+          
+          <!-- Left Side (Contact Info) -->
+          <div class="contact-info">
+              <div class="info-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <div>
+                      <h3>Address</h3>
+                      <p>6-71,Vinayaka Temple,Balabhadrapuram,Kakinada District AndhraPradesh</p>
+                  </div>
+              </div>
+
+              <div class="info-item">
+                  <i class="bi bi-telephone"></i>
+                  <div>
+                      <h3>Call Us</h3>
+                      <p>+91 78427 27933</p>
+                  </div>
+              </div>
+
+              <div class="info-item">
+                  <i class="bi bi-envelope"></i>
+                  <div>
+                      <h3>Email Us</h3>
+                      <p>aswinisudha49@example.com</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Right Side (Form) -->
+          <div class="contact-form">
+              <form action="forms/contact.php" method="post">
+                  <div class="row gy-4">
+
+                      <div class="col-md-6">
+                          <input type="text" name="name" placeholder="Your Name" required>
+                      </div>
+
+                      <div class="col-md-6">
+                          <input type="email" name="email" placeholder="Your Email" required>
+                      </div>
+
+                      <div class="col-md-12">
+                          <input type="text" name="subject" placeholder="Subject" required>
+                      </div>
+
+                      <div class="col-md-12">
+                          <textarea name="message" placeholder="Message" required></textarea>
+                      </div>
+
+                      <div class="col-md-12 text-center">
+                          <button type="submit" >Send Message</button>
+                      </div>
+
+                  </div>
+              </form>
+          </div>
+
+      </div>
+
+  </section>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- <section class="blog" id="blog">
+      <div class="section__container blog__container">
+        <p class="section__subheader">Blog</p>
+        <h2 class="section__header">Latest Updates</h2>
+        <div class="blog__grid">
+          <div class="blog__card">
+            <img src="assets/blog-1.jpg" alt="blog" />
+            <div>
+              <p>20 Jul 2024</p>
+              <h4>The Power of SEO: How to Rank Higher and Drive Traffic</h4>
+            </div>
+          </div>
+          <div class="blog__card">
+            <img src="assets/blog-2.jpg" alt="blog" />
+            <div>
+              <p>15 Oct 2024</p>
+              <h4>Social Media Marketing Trends to Watch in 2024</h4>
+            </div>
+          </div>
+          <div class="blog__card">
+            <img src="assets/blog-3.jpg" alt="blog" />
+            <div>
+              <p>08 Feb 2024</p>
+              <h4>
+                10 Proven Digital Marketing Strategies to Grow Your Business
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <footer>
+      <div class="section__container footer__container">
+        <h4>Aswini Sudha</h4>
+        <ul class="footer__socials">
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
+          <a href="#"><i class="ri-github-fill"></i></a>
+          <a href="#"><i class="ri-mail-line"></i></a>
+          <!-- <a href="#"><i class="ri-pinterest-line"></i></a> -->
+        </ul>
+      </div>
+      <!-- <div class="footer__bar">
+        Copyright © 2024 Web Design Mastery. All rights reserved.
+      </div> -->
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
