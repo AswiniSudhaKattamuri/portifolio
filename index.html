@@ -26,60 +26,65 @@
       </div>
       <ul class="nav__links" id="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#intro">Intro</a></li>
+        <li><a href="#intro">About Me</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#certified">Certifications</a></li>
         <li><a href="#portfolio">Projects</a></li>
-        <li><a href="#contacttt">Contact Me</a></li>
-        <input type="checkbox" id="theme-toggle" hidden>
-        <!-- <input type="checkbox" id="theme-toggle"> -->
-        <!-- <label for="theme-toggle" class="toggle">
-            <span class="icon sun">☀️</span>
-            <span class="icon moon">🌙</span>
-        </label> -->
+        <!-- <li><a href="#contacttt">Contact Me</a></li> -->
+        <!-- <div class="theme-picker">
+          <button class="theme-btn" data-theme="light-theme" style="background: #ff9442;"></button>
+          <button class="theme-btn" data-theme="dark-theme" style="background: #111827;"></button>
+          <button class="theme-btn" data-theme="purple-theme" style="background: #a855f7;"></button>
+          <button class="theme-btn" data-theme="teal-theme" style="background: #14b8a6;"></button>
+        </div> -->
+        
+
+      
       </ul>
       <div class="nav__btns">
         <a href="#contacttt" class="btn" >Hire Me</a>
       </div>
     </nav>
     <!-- <script>
-      const toggle = document.getElementById("theme-toggle");
+    const themeButtons = document.querySelectorAll('.theme-btn');
 
-// Check if Dark Mode was previously enabled
-if (localStorage.getItem("dark-mode") === "enabled") {
-    document.body.classList.add("dark-mode");
-    toggle.checked = true;
-}
+themeButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const theme = btn.getAttribute('data-theme');
+    document.body.className = theme;
 
-// Toggle Theme on Click
-toggle.addEventListener("change", () => {
-    if (toggle.checked) {
-        document.body.classList.add("dark-mode");
-        localStorage.setItem("dark-mode", "enabled");
-    } else {
-        document.body.classList.remove("dark-mode");
-        localStorage.setItem("dark-mode", "disabled");
-    }
+    // Save theme to localStorage
+    localStorage.setItem('selectedTheme', theme);
+  });
 });
 
-    </script> -->
+// Load saved theme
+const savedTheme = localStorage.getItem('selectedTheme');
+if (savedTheme) {
+  document.body.className = savedTheme;
+}
+
+
+</script> -->
+
 
     <header id="home">
       <div class="section__container header__container">
         <div class="header__content">
           <h2>Hi, I am</h2>
           <h1>Aswini Sudha</h1>
-          <h3>Web Development Trainee</h3>
-          <p>
+          <h3>Web Developer</h3>
+
+          <p class="cursor typewriter-animation">
             A creative problem-solver who loves turning ideas into interactive, user-friendly web applications. Constantly exploring new tools to enhance web development skills!
           </p>
           <div class="header__btns">
             <a href="assets/Aswini_Sudha_Kattamuri_Resume.pdf" class="btn" download="Aswini_Sudha_Kattamuri_Resume.pdf">Download CV</a>
-            <a href="#contacttt" class="btn">Contact Me</a>
+            <a href="assets/Aswini_Sudha_Kattamuri_Resume.pdf"  target="_blank" class="btn">View CV</a>
           </div>
         </div>
         <div class="header__image">
-          <!-- <img src="assets/header.png" alt="header" /> -->
+          <!-- <img src="assets/header.png" /> -->
         </div>
       </div>
     </header>
@@ -556,9 +561,12 @@ toggle.addEventListener("change", () => {
       <div class="section__container footer__container">
         <h4>Aswini Sudha</h4>
         <ul class="footer__socials">
-          <a href="#"><i class="ri-linkedin-fill"></i></a>
-          <a href="#"><i class="ri-github-fill"></i></a>
-          <a href="#"><i class="ri-mail-line"></i></a>
+          <a href="https://www.linkedin.com/in/aswini-sudha-kattamuri-856233258/" target="_blank"><i class="ri-linkedin-fill"></i></a>
+          <a href="https://github.com/AswiniSudhaKattamuri" target="_blank"><i class="ri-github-fill"></i></a>
+          <a href="#">
+            <i class="ri-mail-line"></i>
+        </a>
+        
           <!-- <a href="#"><i class="ri-pinterest-line"></i></a> -->
         </ul>
       </div>
